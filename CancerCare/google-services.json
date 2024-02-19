@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "747058425697",
+      "project_id": "cancer-care-840af",
+      "storage_bucket": "cancer-care-840af.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:747058425697:android:8642652341c77ddac2df20",
+          "android_client_info": {
+            "package_name": "com.majorproject.cancercare"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAfd9QFB8BMtBb8C24i1Lu0KKeeot8-HcE"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
