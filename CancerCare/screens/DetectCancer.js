@@ -54,7 +54,7 @@ const DetectCancer = () => {
     const data = {
       image_link: url,
     };
-    await fetch("http://192.168.0.169:5000/predict", {
+    await fetch("http://192.168.0.154:5000/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -195,7 +195,7 @@ const DetectCancer = () => {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            marginBottom:20
+            marginBottom: 20,
           }}
         >
           <Text
@@ -208,7 +208,11 @@ const DetectCancer = () => {
           >
             Prediction History
           </Text>
-          <MaterialCommunityIcons name="history" color={darkMode ? "#fff" : "#000"} size={26} />
+          <MaterialCommunityIcons
+            name="history"
+            color={darkMode ? "#fff" : "#000"}
+            size={26}
+          />
         </View>
         <ScrollView style={{ marginBottom: 40 }}>
           {predictions?.map((item, index) => {
@@ -246,11 +250,15 @@ const DetectCancer = () => {
           <View style={styles.bottomContainerStyle}>
             <Image
               source={{ uri: currenData?.imageUrl }}
-              style={{ width: 250, height: 250, marginBottom:40 }}
+              style={{ width: 250, height: 250, marginBottom: 40 }}
             />
-            <Text style={styles.bottmContainerTextStyle}>Result : {currenData?.label}</Text>
+            <Text style={styles.bottmContainerTextStyle}>
+              Result : {currenData?.label}
+            </Text>
             {currenData !== null && (
-              <Text style={styles.bottmContainerTextStyle}>Accuracy : {Math.floor(currenData?.confidence * 100)}%</Text>
+              <Text style={styles.bottmContainerTextStyle}>
+                Accuracy : {Math.floor(currenData?.confidence * 100)}%
+              </Text>
             )}
           </View>
         </BottomSheetModal>
@@ -315,11 +323,11 @@ const getStyles = (darkMode) => {
       alignItems: "center",
       margin: 30,
     },
-    bottmContainerTextStyle:{
-      color:darkMode ? "#fff":"#000",
-      fontSize:24,
-      fontFamily:"NunitoBold"
-    }
+    bottmContainerTextStyle: {
+      color: darkMode ? "#fff" : "#000",
+      fontSize: 24,
+      fontFamily: "NunitoBold",
+    },
   });
 };
 export default DetectCancer;

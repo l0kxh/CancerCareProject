@@ -139,6 +139,9 @@ export const addPredction = (uid, predictions, prediction, imageUrl) => {
   return async (dispatch) => {
     const docRef = doc(db, "users", uid);
     console.log(imageUrl);
+    if(predictions===null){
+      predictions = []
+    }
     await updateDoc(docRef, {
       prediction: [...predictions, { ...prediction, imageUrl: imageUrl }],
     });

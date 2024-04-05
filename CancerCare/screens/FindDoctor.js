@@ -20,7 +20,7 @@ const FindDoctor = ({ navigation }) => {
   const [styles, setStyles] = useState(getStyles(darkMode));
   const [searchScreen, setSearchScreen] = useState(false);
   const bottomSheetModalRef = useRef(null);
-  const snapPoints = useMemo(() => ["10%", "50%"], []);
+  const snapPoints = useMemo(() => ["10%", "50%", "85%"], []);
   const [suggestions, setSuggestions] = useState([]);
   const [region, setRegion] = useState({
     latitude: 18.3205,

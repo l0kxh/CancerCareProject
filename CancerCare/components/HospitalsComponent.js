@@ -14,6 +14,7 @@ const HospitalsComponent = ({ item, index, darkMode, setLocation }) => {
   useEffect(() => {
     setStyles(getStyles(darkMode));
   }, [darkMode]);
+  
   const openMaps = async (latitude, longitude, label) => {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&travelmode=driving&dir_action=navigate&destination_place_id=${label}`;
     Linking.openURL(url);
